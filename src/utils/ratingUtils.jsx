@@ -13,13 +13,10 @@ export const computeAverageRating = (omdb) => {
   });
   return count ? `${Math.round(total / count)}%` : "N/A";
 };
-
 export const extractImdbRating = (omdb) => {
   if (!omdb || !omdb.Ratings) return null;
-
   const imdb = omdb.Ratings.find((r) => r.Source === "Internet Movie Database");
   if (!imdb || !imdb.Value) return null;
-
-  const value = parseFloat(imdb.Value.split("/")[0]); // "7.0/10" => 7.0
+  const value = parseFloat(imdb.Value.split("/")[0]);
   return isNaN(value) ? null : value;
 };
