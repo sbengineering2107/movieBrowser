@@ -1,7 +1,8 @@
 import React from "react";
 import { computeAverageRating } from "../utils/ratingUtils";
 import { extractImdbRating } from "../utils/ratingUtils";
-
+import PosterImage from "./PosterImage";
+import RatingStars from "./RatingStars";
 import "../styles/movie-details.css";
 
 const MovieDetails = ({ movie, loading }) => {
@@ -22,7 +23,7 @@ const MovieDetails = ({ movie, loading }) => {
     <div className="movie-details">
       <h2>{title}</h2>
       {omdb?.Poster && (
-        <img
+        <PosterImage
           src={
             omdb?.Poster && omdb.Poster !== "N/A" ? omdb.Poster : fallbackPoster
           }
@@ -37,13 +38,7 @@ const MovieDetails = ({ movie, loading }) => {
       {omdb && (
         <div className="ratings">
           {imdbRating ? (
-            <div className="stars">
-              <strong>Average Rating:</strong>
-              {Array.from({ length: 10 }).map((_, i) => (
-                <span key={i}>{i < filledStars ? "★" : "☆"}</span>
-              ))}
-              <span>{imdbRating}/10</span>
-            </div>
+            <RatingStars rating={imdbRating} />
           ) : (
             <p>
               <strong>Average Rating:</strong> {averageRating}
