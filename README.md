@@ -1,6 +1,6 @@
 # ⭐ Star Wars Movie Browser
 
-A responsive and interactive movie explorer built with **React + Vite + Axios**, integrating data from [SWAPI](https://swapi.dev) and [OMDb API](https://www.omdbapi.com/).
+A responsive and interactive movie explorer built with **React + Vite + Axios**, integrating data from [SWAPI](https://swapi.py4e.com/) and [OMDb API](https://www.omdbapi.com/).
 
 ---
 
@@ -8,7 +8,7 @@ A responsive and interactive movie explorer built with **React + Vite + Axios**,
 
 ### ✅ Core Assignment Criteria
 
-- Fetch and display a list of Star Wars films using `https://swapi.dev/api/films/`
+- Fetch and display a list of Star Wars films using `https://swapi.py4e.com/api/films/?format=json`
 - Show a **details panel** for a selected movie (or a default message if none is selected)
 - Ability to:
   - 🔍 Filter movies by title
@@ -18,7 +18,7 @@ A responsive and interactive movie explorer built with **React + Vite + Axios**,
 ### 🌟 Bonus Features
 
 - Integrates with **OMDb API** using key: `b9a5e69d`
-- Displays:
+- Displays on Movie Details section:
   - 🎬 Poster image (or fallback if unavailable)
   - 🎯 Ratings from IMDb, Rotten Tomatoes, and Metacritic
   - ⭐ IMDb rating shown as stars
