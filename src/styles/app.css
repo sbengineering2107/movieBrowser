@@ -1,0 +1,68 @@
+body {
+  font-family: Helvetica, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+}
+
+.container {
+  padding: 16px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 600px) {
+  .toolbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column; /* default for mobile */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .main-wrapper {
+    flex-direction: column; /* keep column if it wraps toolbar + main */
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column; /* default for mobile */
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .main {
+    flex-direction: row; /* row layout on desktop */
+  }
+}
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
