@@ -1,6 +1,6 @@
 # ⭐ Star Wars Movie Browser
 
-A responsive and interactive movie explorer built with **React + Vite + Axios**, integrating data from [SWAPI](https://swapi.dev) and [OMDb API](https://www.omdbapi.com/).
+A responsive and interactive movie explorer built with **React + Vite + Axios**, integrating data from [SWAPI](https://swapi.py4e.com/) and [OMDb API](https://www.omdbapi.com/).
 
 ---
 
